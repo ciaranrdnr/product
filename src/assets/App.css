@@ -1,0 +1,412 @@
+html {
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font: 400 11px/19px Roboto, sans-serif;
+}
+
+.Body {
+  padding: 0 10px;
+}
+
+h1,
+.Xl-bold {
+  font: 700 16px/24px Roboto, sans-serif;
+}
+
+h2 {
+  font: 700 16px/24px Roboto, sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+.Sale-price {
+  padding-left: 8px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #9b9b9b;
+  font: 400 11px/19px Roboto, sans-serif;
+}
+
+.Grey-text {
+  color: #9b9b9b;
+}
+
+.Btn {
+  background-color: #ef6000;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font: 700 14px/22px Roboto, sans-serif;
+  height: 40px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.Indicator {
+  font: 400 12px/20px Roboto, sans-serif;
+  height: 16px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 4px;
+  text-align: center;
+  display: inline;
+}
+
+.Indicator.Outline-green {
+  border: 1px solid #208060;
+  color: #208060;
+}
+
+.Indicator.Outline-orange {
+  border: 1px solid #ef6000;
+  color: #ef6000;
+}
+
+.Indicator.Fill-green {
+  background-color: #d4edda;
+  color: #208060;
+}
+
+.Indicator.Fill-red {
+  background-color: #f33030;
+  color: #ffffff;
+}
+
+.Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px;
+  position: relative;
+  min-height: 238px;
+  min-width: 148px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 6px 0px #3434342e;
+          box-shadow: 0px 1px 6px 0px #3434342e;
+}
+
+.Card > .Card-body {
+  font: 400 11px/19px Roboto, sans-serif;
+  padding: 10px;
+}
+
+.Card > .Card-body div {
+  margin: 10px 0;
+}
+
+.Card > .Card-body p {
+  margin: 0;
+}
+
+.Card > .Card-body p.Card-price {
+  color: #ef6000;
+  font: 700 16px/24px Roboto, sans-serif;
+  margin: 10px 0;
+}
+
+.Card > .Card-footer {
+  padding: 0px 8px 8px 8px;
+}
+
+.Card > .Card-footer p {
+  margin: 0;
+}
+
+.CardList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Img-mask {
+  /* Mask Group */
+  position: static;
+  min-width: 148px;
+  height: 74px;
+  left: 0px;
+  top: 0px;
+  /* Inside Auto Layout */
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  margin: 10px 0px;
+  -webkit-box-shadow: 0px 1px 6px 0px #3434342e;
+          box-shadow: 0px 1px 6px 0px #3434342e;
+}
+
+.Img-mask img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 84.03px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px 8px 0 0;
+}
+
+.Header {
+  border-bottom: solid 1px #e2e8f0;
+  padding: 10px;
+}
+
+.Header img {
+  max-width: 123px;
+  height: auto;
+}
+
+.Footer {
+  border-top: solid 1px #e2e8f0;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.Img-detail {
+  width: -webkit-fill-available;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+}
+
+.Detail {
+  background-color: #f4f4f4;
+}
+
+.Detail .Footer {
+  margin: 0;
+}
+
+.DetailHead {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.DetailHead .Top {
+  padding: 0 18px 10px 18px;
+}
+
+.DetailHead .Top .Title {
+  font: 700 16px/24px Roboto, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.DetailHead .Top .Brand {
+  font: 400 12px/20px Roboto, sans-serif;
+}
+
+.DetailHead .Mid {
+  padding: 0 18px 10px 18px;
+}
+
+.DetailHead .Mid .Price {
+  font: 700 21px/24px Roboto, sans-serif;
+  color: #ef6000;
+}
+
+.DetailHead .Bottom {
+  padding: 0 18px 21px 18px;
+}
+
+.DetailDesc {
+  padding: 21px 18px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.DetailDesc p {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 175ch;
+}
+
+.DetailDesc p.Show {
+  overflow: visible;
+  -webkit-box-orient: unset;
+}
+
+.Btn-text {
+  font: 700 14px/22px Roboto, sans-serif;
+  color: #307fe2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.DetailOthers {
+  padding: 21px 18px;
+  background-color: #ffffff;
+}
+
+.DetailOthers .Top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Carousel {
+  margin: 12px 0;
+}
+
+.Btn-top {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  max-width: 600px;
+}
+
+.Btn-top .BtnTop-right,
+.Btn-top .Btn-back {
+  padding: 12px 18px;
+}
+
+.Btn-top .BtnTop-right > .Btn-icon {
+  margin-left: 12px;
+}
+
+svg.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Btn-icon {
+  background: rgba(52, 52, 52, 0.5);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.Btn-icon .icon > path {
+  stroke: #ffffff;
+}
+
+@-webkit-keyframes toFill {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 200%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes toFill {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 200%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button .Icon .Icon-heart {
+  fill: #f33030;
+  width: 100px;
+  -webkit-animation: toFill 4s ease-in;
+          animation: toFill 4s ease-in;
+}
+
+.Circle {
+  background: #f33030;
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+  border-radius: 8px;
+  font: 400 10px/18px Roboto, sans-serif;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+@media only screen and (min-width: 601px) and (orientation: landscape) {
+  #root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #f4f4f4;
+  }
+  .App {
+    width: 600px;
+    background-color: #ffffff;
+  }
+}
+/*# sourceMappingURL=App.css.map */

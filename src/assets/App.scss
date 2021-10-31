@@ -1,0 +1,355 @@
+// color
+$black: #000000;
+$grey-dark: #595959;
+$grey-light: #9b9b9b;
+$grey-light-2: #e2e8f0;
+$grey-light-3: #f4f4f4;
+$white: #ffffff;
+$blue: #307fe2;
+$blue-light: #e1eeff;
+$green: #208060;
+$green-light: #d4edda;
+$red: #f33030;
+$orange: #ef6000;
+// shadow
+$shadow-light: 0px 1px 6px 0px #3434342e;
+// font
+$xxl-bold: 700 21px/24px Roboto, sans-serif;
+
+$xl-bold: 700 16px/24px Roboto, sans-serif;
+$xl-medium: 500 16px/24px Roboto, sans-serif;
+$xl-regular: 400 16px/24px Roboto, sans-serif;
+
+$l-bold: 700 14px/22px Roboto, sans-serif;
+$l-medium: 500 14px/22px Roboto, sans-serif;
+$l-regular: 400 14px/22px Roboto, sans-serif;
+
+$m-bold: 700 12px/20px Roboto, sans-serif;
+$m-medium: 500 12px/20px Roboto, sans-serif;
+$m-regular: 400 12px/20px Roboto, sans-serif;
+
+$s-bold: 700 11px/19px Roboto, sans-serif;
+$s-medium: 500 11px/19px Roboto, sans-serif;
+$s-regular: 400 11px/19px Roboto, sans-serif;
+
+$xs-regular: 400 10px/18px Roboto, sans-serif;
+// border
+$default: 8px;
+// image
+$img-w: 148px;
+$max-imgDetail-w: 600px;
+$min-imgDetail-w: 362px;
+// icon
+$icon-size: 24px;
+html {
+  width: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font: $s-regular;
+}
+.Body {
+  padding: 0 10px;
+}
+
+h1,
+.Xl-bold {
+  font: $xl-bold;
+}
+h2 {
+  font: $xl-bold;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: $black;
+}
+.Sale-price {
+  padding-left: 8px;
+  text-decoration-line: line-through;
+  color: $grey-light;
+  font: $s-regular;
+}
+.Grey-text {
+  color: $grey-light;
+}
+.Btn {
+  background-color: $orange;
+  border: none;
+  border-radius: $default;
+  color: $white;
+  font: $l-bold;
+  height: 40px;
+  min-width: 300px;
+  width: 100%;
+}
+.Indicator {
+  font: $m-regular;
+  height: 16px;
+  border-radius: $default/2;
+  border: none;
+  padding: 0 4px;
+  text-align: center;
+  display: inline;
+
+  &.Outline-green {
+    border: 1px solid $green;
+    color: $green;
+  }
+  &.Outline-orange {
+    border: 1px solid $orange;
+    color: $orange;
+  }
+  &.Fill-green {
+    background-color: $green-light;
+    color: $green;
+  }
+  &.Fill-red {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.Card {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  flex-direction: column;
+  padding: 0px;
+  position: relative;
+  min-height: 238px;
+  min-width: 148px;
+  border-radius: $default;
+  background-color: $white;
+  box-shadow: $shadow-light;
+  > .Card-body {
+    font: $s-regular;
+    padding: 10px;
+    div {
+      margin: 10px 0;
+    }
+    p {
+      margin: 0;
+
+      &.Card-price {
+        color: $orange;
+        font: $xl-bold;
+        margin: 10px 0;
+      }
+    }
+  }
+  > .Card-footer {
+    padding: 0px $default $default $default;
+    p {
+      margin: 0;
+    }
+  }
+}
+.CardList {
+  display: flex;
+}
+.Img-mask {
+  /* Mask Group */
+  position: static;
+  min-width: $img-w;
+  height: $img-w/2;
+  left: 0px;
+  top: 0px;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
+  box-shadow: $shadow-light;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 84.03px;
+    left: 0px;
+    top: 0px;
+    border-radius: $default $default 0 0;
+  }
+}
+
+.Header {
+  border-bottom: solid 1px $grey-light-2;
+  padding: 10px;
+  img {
+    max-width: 123px;
+    height: auto;
+  }
+}
+.Footer {
+  border-top: solid 1px $grey-light-2;
+  text-align: center;
+  margin-top: 50px;
+  padding: $default * 1.25;
+  background: $white;
+}
+
+.Img-detail {
+  width: -webkit-fill-available;
+  object-fit: cover;
+  max-height: $max-imgDetail-w/2;
+}
+.Detail {
+  background-color: $grey-light-3;
+  .Footer {
+    margin: 0;
+  }
+}
+.DetailHead {
+  background-color: $white;
+  margin-bottom: 10px;
+  .Top {
+    padding: 0 18px 10px 18px;
+
+    .Title {
+      font: $xl-bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .Brand {
+      font: $m-regular;
+    }
+  }
+  .Mid {
+    padding: 0 18px 10px 18px;
+    .Price {
+      font: $xxl-bold;
+      color: $orange;
+    }
+  }
+  .Bottom {
+    padding: 0 18px 21px 18px;
+  }
+}
+.DetailDesc {
+  padding: 21px 18px;
+  background-color: $white;
+  margin-bottom: 10px;
+
+  p {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 175ch;
+    &.Show {
+      overflow: visible;
+      -webkit-box-orient: unset;
+    }
+  }
+}
+.Btn-text {
+  font: $l-bold;
+  color: $blue;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.DetailOthers {
+  padding: 21px 18px;
+  background-color: $white;
+
+  .Top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.Carousel {
+  margin: 12px 0;
+}
+.Btn-top {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  max-width: $max-imgDetail-w;
+  .BtnTop-right,
+  .Btn-back {
+    padding: 12px 18px;
+  }
+  .BtnTop-right > .Btn-icon {
+    margin-left: 12px;
+  }
+}
+svg.icon {
+  display: flex;
+}
+.Btn-icon {
+  background: rgba(52, 52, 52, 0.5);
+  border-radius: 4px;
+  padding: 2px;
+  .icon > path {
+    stroke: $white;
+  }
+}
+@keyframes toFill {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 200%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: $default;
+  .Icon .Icon-heart {
+    fill: $red;
+    width: 100px;
+
+    animation: toFill 4s ease-in;
+    // transition: width 0.2s;
+  }
+  // .Icon-heart:active {
+  //   width: 100px;
+  //   height: auto;
+  // }
+}
+.Circle {
+  background: $red;
+  width: 16px;
+  height: 16px;
+  color: $white;
+  border-radius: $default;
+  font: $xs-regular;
+  position: absolute;
+  top: $default;
+  right: $default * 1.25;
+}
+@media only screen and (min-width: 601px) and (orientation: landscape) {
+  #root {
+    display: flex;
+    justify-content: center;
+    background-color: $grey-light-3;
+  }
+  .App {
+    width: 600px;
+    background-color: $white;
+  }
+}
