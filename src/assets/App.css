@@ -258,7 +258,7 @@ a:active {
 
 .DetailDesc p.Show {
   overflow: visible;
-  -webkit-box-orient: unset;
+  -webkit-box-orient: horizontal;
 }
 
 .Btn-text {
@@ -299,7 +299,7 @@ a:active {
   margin: 12px 0;
 }
 
-.Btn-top {
+.Nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -315,16 +315,41 @@ a:active {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
-  position: absolute;
+  position: fixed;
+  background: none;
   max-width: 600px;
 }
 
-.Btn-top .BtnTop-right,
-.Btn-top .Btn-back {
-  padding: 12px 18px;
+.Nav .Btn-icon {
+  background: rgba(52, 52, 52, 0.5);
+  border-radius: 4px;
+  padding: 2px;
 }
 
-.Btn-top .BtnTop-right > .Btn-icon {
+.Nav .Btn-icon .icon > path {
+  stroke: #ffffff;
+}
+
+.Nav.Nav-bg {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.Nav.Nav-bg .Btn-icon {
+  background: none;
+  padding: 2px;
+}
+
+.Nav.Nav-bg .Btn-icon .icon > path {
+  stroke: #595959;
+}
+
+.Nav .BtnTop-right,
+.Nav .Btn-back {
+  padding: 10px 18px;
+}
+
+.Nav .BtnTop-right > .Btn-icon {
   margin-left: 12px;
 }
 
@@ -332,16 +357,6 @@ svg.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.Btn-icon {
-  background: rgba(52, 52, 52, 0.5);
-  border-radius: 4px;
-  padding: 2px;
-}
-
-.Btn-icon .icon > path {
-  stroke: #ffffff;
 }
 
 @-webkit-keyframes toFill {

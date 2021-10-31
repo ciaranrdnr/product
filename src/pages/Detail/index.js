@@ -1,47 +1,32 @@
 import { useState } from "react";
-
 import CardList from "../../components/CardList";
 import Indicator from "../../components/indicator";
+import Nav from "../../components/navbar";
 import Btn from "../../components/btn";
 import IconLike from "../../assets/icon/heart.js";
-import IconCart from "../../assets/icon/cart.js";
-import IconShare from "../../assets/icon/share.js";
-import IconBack from "../../assets/icon/back.js";
 import imgGame from "../../assets/game-1.png";
-import { Link } from "react-router-dom";
 
 const Detail = () => {
   const [fill, setFill] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [bg, setBg] = useState(false);
   let [numCart, setNumCart] = useState(0);
-  
+  const showBg = () => {
+    if (window.scrollY > 20) {
+      setBg(true);
+    } else {
+      setBg(false);
+    }
+    console.warn(bg);
+  };
+  window.addEventListener("scroll", showBg);
   return (
     <div className="Detail">
       {/* Detailhead */}
-      <div className="DetailHead">
-        <div>
-          <div className="Btn-top">
-            <Link to="/">
-              <div className="Btn-back">
-                <button className="Btn-icon  ">
-                  <IconBack />
-                </button>
-              </div>
-            </Link>
+      <Nav numCart={numCart} bg={bg} />
 
-            <div className="BtnTop-right">
-              <button className="Btn-icon">
-                <IconShare />
-              </button>
-              <button className="Btn-icon">
-                <IconCart />
-                {numCart>0?<div className="Circle">{numCart}</div>:<></>}
-                
-              </button>
-            </div>
-          </div>
-          <img className="Img-detail" src={imgGame} alt="game" />
-        </div>
+      <div className="DetailHead">
+        <img className="Img-detail" src={imgGame} alt="game" />
         <div className="Top">
           <div className="Title">
             <h1>366 Diamonds</h1>
@@ -63,7 +48,7 @@ const Detail = () => {
       </div>
       <div className="DetailDesc">
         <h2>Deskripsi Produk</h2>
-        <p className={isVisible?"Show":""}>
+        <p className={isVisible ? "Show" : ""}>
           Format Pengisian: - Awal Pembuatan log facebook, pengisian menggunakan
           open id. Jika, - Awal pembuatan akun log garena, harus bind terlebih
           dahulu ke facebook. kalau udah bind, kirim email/no hp beserta pasword
@@ -71,8 +56,13 @@ const Detail = () => {
           garena * Klik me * Klik Facebook * Klik Hubungkan ke Facebook Catatan:
           voucher dijamin legal, karena pengisiannya dari kiosgamer langsung
         </p>
-        <div className="Btn-text" onClick={() => {setIsVisible(!isVisible)}}>
-          {isVisible?<>Tutup</>:<>Selengkapnya</>}
+        <div
+          className="Btn-text"
+          onClick={() => {
+            setIsVisible(!isVisible);
+          }}
+        >
+          {isVisible ? <>Tutup</> : <>Selengkapnya</>}
         </div>
       </div>
 
@@ -86,11 +76,10 @@ const Detail = () => {
         <p className="Grey-text">
           Produk dari penjual-penjual yang memberi Garansi Pengiriman 10 menit
         </p>
-<CardList/>
-        
+        <CardList />
       </div>
       <div className="Footer">
-        <Btn title="Tambah ke Troli"  onClick={()=>setNumCart(numCart+1)}/>
+        <Btn title="Tambah ke Troli" onClick={() => setNumCart(numCart + 1)} />
       </div>
     </div>
   );

@@ -246,7 +246,7 @@ a:active {
     max-width: 175ch;
     &.Show {
       overflow: visible;
-      -webkit-box-orient: unset;
+      -webkit-box-orient: horizontal;
     }
   }
 }
@@ -275,18 +275,39 @@ a:active {
 .Carousel {
   margin: 12px 0;
 }
-.Btn-top {
+.Nav {
   justify-content: space-between;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  position: absolute;
+  position: fixed;
+  background: none;
   max-width: $max-imgDetail-w;
+  .Btn-icon {
+    background: rgba(52, 52, 52, 0.5);
+    border-radius: 4px;
+    padding: 2px;
+    .icon > path {
+      stroke: $white;
+    }
+  }
+  &.Nav-bg {
+    background: $white;
+    border-bottom: 1px solid $grey-light-2;
+    .Btn-icon {
+      background: none;
+      padding: 2px;
+      .icon > path {
+        stroke: $grey-dark;
+      }
+    }
+  }
+
   .BtnTop-right,
   .Btn-back {
-    padding: 12px 18px;
+    padding: 10px 18px;
   }
   .BtnTop-right > .Btn-icon {
     margin-left: 12px;
@@ -295,14 +316,7 @@ a:active {
 svg.icon {
   display: flex;
 }
-.Btn-icon {
-  background: rgba(52, 52, 52, 0.5);
-  border-radius: 4px;
-  padding: 2px;
-  .icon > path {
-    stroke: $white;
-  }
-}
+
 @keyframes toFill {
   0% {
     width: 100%;
