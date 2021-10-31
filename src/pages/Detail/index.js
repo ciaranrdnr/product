@@ -17,7 +17,6 @@ const Detail = () => {
     } else {
       setBg(false);
     }
-    console.warn(bg);
   };
   window.addEventListener("scroll", showBg);
   return (
