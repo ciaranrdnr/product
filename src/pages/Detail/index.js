@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CardList from "../../components/CardList";
 import Indicator from "../../components/indicator";
 import Nav from "../../components/navbar";
 import Btn from "../../components/btn";
 import IconLike from "../../assets/icon/heart.js";
 import imgGame from "../../assets/game-1.png";
-
+import { BottomSheet } from "react-spring-bottom-sheet";
+import "react-spring-bottom-sheet/dist/style.css";
 const Detail = () => {
+  const sheetRef = useRef();
   const [fill, setFill] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [bg, setBg] = useState(false);
@@ -18,6 +20,9 @@ const Detail = () => {
       setBg(false);
     }
   };
+  function onDismiss() {
+    setIsVisible(false);
+  }
   window.addEventListener("scroll", showBg);
   return (
     <div className="Detail">
@@ -33,7 +38,7 @@ const Detail = () => {
               <IconLike fill={fill} />
             </button>
           </div>
-          <div className="Brand Grey-text">Mobile Legends</div>
+          <div className="Brand Grey-text">Apex Legends</div>
         </div>
         <div className="Mid">
           <span className="Price">Rp100.000</span>{" "}
@@ -47,7 +52,7 @@ const Detail = () => {
       </div>
       <div className="DetailDesc">
         <h2>Deskripsi Produk</h2>
-        <p className={isVisible ? "Show" : ""}>
+        <p>
           Format Pengisian: - Awal Pembuatan log facebook, pengisian menggunakan
           open id. Jika, - Awal pembuatan akun log garena, harus bind terlebih
           dahulu ke facebook. kalau udah bind, kirim email/no hp beserta pasword
@@ -58,11 +63,31 @@ const Detail = () => {
         <div
           className="Btn-text"
           onClick={() => {
-            setIsVisible(!isVisible);
+            setIsVisible(true);
           }}
         >
-          {isVisible ? <>Tutup</> : <>Selengkapnya</>}
+          Selengkapnya
         </div>
+        <BottomSheet
+          ref={sheetRef}
+          open={isVisible}
+          onDismiss={onDismiss}
+          snapPoints={({ minHeight, maxHeight }) => [
+            minHeight,
+            maxHeight / 0.6,
+          ]}
+        >
+          <h2>Deskripsi Produk</h2>
+          <p className="Deskripsi">
+            Format Pengisian: - Awal Pembuatan log facebook, pengisian
+            menggunakan open id. Jika, - Awal pembuatan akun log garena, harus
+            bind terlebih dahulu ke facebook. kalau udah bind, kirim email/no hp
+            beserta pasword fb tsb. cara bind: * download apk garena * login
+            menggunakan akun garena * Klik me * Klik Facebook * Klik Hubungkan
+            ke Facebook Catatan: voucher dijamin legal, karena pengisiannya dari
+            kiosgamer langsung
+          </p>
+        </BottomSheet>
       </div>
 
       <div className="DetailOthers">

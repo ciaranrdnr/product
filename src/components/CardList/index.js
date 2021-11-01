@@ -41,16 +41,86 @@ const CardList = (props) => {
       arrows={false}
       keyBoardControl={true}
     >
-      <Card title="100 Apex Coins" game="Apex Legends" src={img1} />
-      <Card title="2000 UC" game="PUBG Mobile" src={img2} />
-      <Card title="4000 Diamonds" game="Mobile Legends" src={img3} />
-      <Card title="1000 Diamonds" game="Play Together" src={img4} />
-      <Card title="230 Voucher" game="GTA San Andreas" src={img5} />
-      <Card title="100 Apex Coins" game="Garena FF" src={img6} />
-      <Card title="2000 UC" game="PUBG Mobile" src={img1} />
-      <Card title="4000 Diamonds" game="Mobile Legends" src={img2} />
-      <Card title="1000 Diamonds" game="Play Together" src={img3} />
-      <Card title="230 Voucher" game="Arena of Valor" src={img4} />
+      <Card
+        title="100 Apex Coins"
+        game="Apex Legends"
+        src={img1}
+        stok={12}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="2000 UC"
+        game="PUBG Mobile"
+        src={img2}
+        stok={1000}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="4000 Diamonds"
+        game="Mobile Legends"
+        src={img3}
+        stok={1000}
+        disc={20}
+        price={200000}
+      />
+      <Card
+        title="1000 Diamonds"
+        game="Play Together"
+        src={img4}
+        stok={2}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="230 Voucher"
+        game="GTA San Andreas"
+        src={img5}
+        stok={1000}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="100 Apex Coins"
+        game="Garena FF"
+        src={img6}
+        stok={1000}
+        disc={10}
+        price={200000}
+      />
+      <Card
+        title="2000 UC"
+        game="PUBG Mobile"
+        src={img1}
+        stok={1000}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="4000 Diamonds"
+        game="Mobile Legends"
+        src={img2}
+        stok={1000}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="1000 Diamonds"
+        game="Play Together"
+        src={img3}
+        stok={100}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="230 Voucher"
+        game="Arena of Valor"
+        src={img4}
+        stok={100}
+        disc={50}
+        price={200000}
+      />
     </Carousel>
   );
 };

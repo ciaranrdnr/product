@@ -407,6 +407,25 @@ button .Icon .Icon-heart {
   position: absolute;
   top: 8px;
   right: 10px;
+  padding: 0 2px;
+}
+
+[data-rsbs-has-footer="false"] [data-rsbs-content] {
+  padding: 0 16px 10px 16px;
+}
+
+p.Deskripsi {
+  font: 400 12px/20px Roboto, sans-serif;
+  text-align: justify;
+  padding-bottom: 80px;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media only screen and (min-width: 601px) and (orientation: landscape) {

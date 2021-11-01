@@ -338,12 +338,7 @@ button {
     width: 100px;
 
     animation: toFill 4s ease-in;
-    // transition: width 0.2s;
   }
-  // .Icon-heart:active {
-  //   width: 100px;
-  //   height: auto;
-  // }
 }
 .Circle {
   background: $red;
@@ -355,6 +350,22 @@ button {
   position: absolute;
   top: $default;
   right: $default * 1.25;
+  padding: 0 2px;
+}
+[data-rsbs-has-footer="false"] [data-rsbs-content] {
+  padding: 0 $default * 2 10px $default * 2;
+}
+p.Deskripsi {
+  font: $m-regular;
+  text-align: justify;
+  padding-bottom: $default * 10;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @media only screen and (min-width: 601px) and (orientation: landscape) {
   #root {

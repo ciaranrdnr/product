@@ -14,23 +14,25 @@ const Card = (props) => {
           <div>
             <Indicator
               titleFront="Stok"
-              num="999+"
+              num={props.stok > 999 ? "999+" : props.stok}
               titleBack=""
-              outline="Outline-green"
+              outline={props.stok > 999 ? "Outline-green" : "Outline-orange"}
               fill=""
             />
           </div>
           <div>
             <Indicator
               titleFront=""
-              num="99%"
+              num={props.disc + "%"}
               titleBack=""
               outline=""
               fill="Fill-red"
             />
-            <span className="Sale-price">Rp200.000</span>
+            <span className="Sale-price">
+              Rp{props.price * (props.disc / 100)}
+            </span>
           </div>
-          <p className="Card-price">Rp100.000</p>
+          <p className="Card-price">Rp{props.price}</p>
           <Indicator
             titleFront=""
             num="10"
