@@ -347,15 +347,15 @@ button {
 
 .Circle {
   background: $red;
-  width: 16px;
+  min-width: 12px;
   height: 16px;
   color: $white;
   border-radius: $default;
   font: $xs-regular;
   position: absolute;
   top: $default/2;
+  padding: 0 2px;
   right: $default * 1.25;
-  display: inline-table;
 }
 [data-rsbs-has-footer="false"] [data-rsbs-content] {
   padding: 0 $default * 2 10px $default * 2;

@@ -21,13 +21,6 @@ const Detail = () => {
       setBg(false);
     }
   };
-  const showImg = () => {
-    if (window.scrollY > 20) {
-      setViewImage(true);
-    } else {
-      setViewImage(false);
-    }
-  };
   function onDismiss() {
     setIsVisible(false);
   }
@@ -120,9 +113,7 @@ const Detail = () => {
       <div className="DetailOthers">
         <div className="Top">
           <h2>Pengiriman Tercepat</h2>
-          <div className="Btn-text" onClick={() => {}}>
-            Lihat Semua
-          </div>
+          <div className="Btn-text">Lihat Semua</div>
         </div>
         <p className="Grey-text">
           Produk dari penjual-penjual yang memberi Garansi Pengiriman 10 menit

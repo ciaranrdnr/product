@@ -404,15 +404,15 @@ button .Icon .Icon-heart {
 
 .Circle {
   background: #f33030;
-  width: 16px;
+  min-width: 12px;
   height: 16px;
   color: #ffffff;
   border-radius: 8px;
   font: 400 10px/18px Roboto, sans-serif;
   position: absolute;
   top: 4px;
+  padding: 0 2px;
   right: 10px;
-  display: inline-table;
 }
 
 [data-rsbs-has-footer="false"] [data-rsbs-content] {

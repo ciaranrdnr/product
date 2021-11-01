@@ -33,11 +33,11 @@ const Card = (props) => {
               outline=""
               fill="Fill-red"
             />
-            <span className="Sale-price">
-              Rp{money(props.price * (props.disc / 100))}
-            </span>
+            <span className="Sale-price">Rp{money(props.price)}</span>
           </div>
-          <p className="Card-price">Rp{money(props.price)}</p>
+          <p className="Card-price">
+            Rp{money(props.price * (props.disc / 100))}
+          </p>
           <Indicator
             titleFront=""
             num="10"
