@@ -2,6 +2,11 @@ import Indicator from "./indicator";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
+  const money = (number) => {
+    return new Intl.NumberFormat("id-IN", {
+      maximumSignificantDigits: 3,
+    }).format(number);
+  };
   return (
     <Link to="/detail">
       <div className="Card">
@@ -23,16 +28,16 @@ const Card = (props) => {
           <div>
             <Indicator
               titleFront=""
-              num={props.disc + "%"}
+              num={`${props.disc}%`}
               titleBack=""
               outline=""
               fill="Fill-red"
             />
             <span className="Sale-price">
-              Rp{props.price * (props.disc / 100)}
+              Rp{money(props.price * (props.disc / 100))}
             </span>
           </div>
-          <p className="Card-price">Rp{props.price}</p>
+          <p className="Card-price">Rp{money(props.price)}</p>
           <Indicator
             titleFront=""
             num="10"

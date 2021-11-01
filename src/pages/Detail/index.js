@@ -11,6 +11,7 @@ const Detail = () => {
   const sheetRef = useRef();
   const [fill, setFill] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [viewImage, setViewImage] = useState(false);
   const [bg, setBg] = useState(false);
   let [numCart, setNumCart] = useState(0);
   const showBg = () => {
@@ -20,8 +21,18 @@ const Detail = () => {
       setBg(false);
     }
   };
+  const showImg = () => {
+    if (window.scrollY > 20) {
+      setViewImage(true);
+    } else {
+      setViewImage(false);
+    }
+  };
   function onDismiss() {
     setIsVisible(false);
+  }
+  function dismissImg() {
+    setViewImage(false);
   }
   window.addEventListener("scroll", showBg);
   return (
@@ -30,7 +41,23 @@ const Detail = () => {
       <Nav numCart={numCart} bg={bg} />
 
       <div className="DetailHead">
-        <img className="Img-detail" src={imgGame} alt="game" />
+        <img
+          className="Img-detail"
+          src={imgGame}
+          alt="game"
+          onClick={() => setViewImage(true)}
+        />
+        <BottomSheet
+          ref={sheetRef}
+          open={viewImage}
+          onDismiss={dismissImg}
+          snapPoints={({ minHeight, maxHeight }) => [
+            minHeight,
+            maxHeight / 0.6,
+          ]}
+        >
+          <img className="View-img" src={imgGame} alt="game" />
+        </BottomSheet>
         <div className="Top">
           <div className="Title">
             <h1>366 Diamonds</h1>

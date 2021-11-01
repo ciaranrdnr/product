@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   font: 400 11px/19px Roboto, sans-serif;
+  background-color: #f4f4f4;
 }
 
 .Body {
@@ -192,6 +192,11 @@ a:active {
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 300px;
+  cursor: pointer;
+}
+
+.View-img {
+  width: -webkit-fill-available;
 }
 
 .Detail {
@@ -405,9 +410,9 @@ button .Icon .Icon-heart {
   border-radius: 8px;
   font: 400 10px/18px Roboto, sans-serif;
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 10px;
-  padding: 0 2px;
+  display: inline-table;
 }
 
 [data-rsbs-has-footer="false"] [data-rsbs-content] {
@@ -424,7 +429,8 @@ input,
 textarea,
 button,
 select,
-a {
+a,
+.Btn-text {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 

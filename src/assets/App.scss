@@ -45,8 +45,8 @@ html {
   width: 100%;
 }
 body {
-  font-family: "Roboto", sans-serif;
   font: $s-regular;
+  background-color: $grey-light-3;
 }
 .Body {
   padding: 0 10px;
@@ -198,6 +198,10 @@ a:active {
   width: -webkit-fill-available;
   object-fit: cover;
   max-height: $max-imgDetail-w/2;
+  cursor: pointer;
+}
+.View-img {
+  width: -webkit-fill-available;
 }
 .Detail {
   background-color: $grey-light-3;
@@ -340,6 +344,7 @@ button {
     animation: toFill 4s ease-in;
   }
 }
+
 .Circle {
   background: $red;
   width: 16px;
@@ -348,9 +353,9 @@ button {
   border-radius: $default;
   font: $xs-regular;
   position: absolute;
-  top: $default;
+  top: $default/2;
   right: $default * 1.25;
-  padding: 0 2px;
+  display: inline-table;
 }
 [data-rsbs-has-footer="false"] [data-rsbs-content] {
   padding: 0 $default * 2 10px $default * 2;
@@ -364,7 +369,8 @@ input,
 textarea,
 button,
 select,
-a {
+a,
+.Btn-text {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @media only screen and (min-width: 601px) and (orientation: landscape) {
