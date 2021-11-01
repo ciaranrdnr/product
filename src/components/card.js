@@ -1,5 +1,4 @@
 import Indicator from "./indicator";
-import imgApex from "../assets/game-1.png";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
@@ -7,7 +6,7 @@ const Card = (props) => {
     <Link to="/detail">
       <div className="Card">
         <div className="Card-header Img-mask">
-          <img src={imgApex} alt="product" />
+          <img src={props.src} alt="product" />
         </div>
         <div className="Card-body">
           <p className="Card-title">{props.title}</p>
@@ -39,7 +38,6 @@ const Card = (props) => {
             outline=""
             fill="Fill-green"
           />
-         
         </div>
         <div className="Card-footer">
           <p className="Grey-text">1000 produk terjual</p>

@@ -1,4 +1,10 @@
 import Carousel from "react-multi-carousel";
+import img1 from "../../assets/game-1.webp";
+import img4 from "../../assets/game-2.webp";
+import img2 from "../../assets/game-3.webp";
+import img3 from "../../assets/game-4.webp";
+import img5 from "../../assets/game-5.webp";
+import img6 from "../../assets/game-6.webp";
 import "react-multi-carousel/lib/styles.css";
 import Card from "../card";
 const CardList = (props) => {
@@ -35,16 +41,16 @@ const CardList = (props) => {
       arrows={false}
       keyBoardControl={true}
     >
-      <Card title="100 Apex Coins" game="Apex Legends" />
-      <Card title="2000 UC" game="PUBG Mobile" />
-      <Card title="4000 Diamonds" game="Mobile Legends" />
-      <Card title="1000 Diamonds" game="Play Together" />
-      <Card title="230 Voucher" game="Arena of Valor" />
-      <Card title="100 Apex Coins" game="Apex Legends" />
-      <Card title="2000 UC" game="PUBG Mobile" />
-      <Card title="4000 Diamonds" game="Mobile Legends" />
-      <Card title="1000 Diamonds" game="Play Together" />
-      <Card title="230 Voucher" game="Arena of Valor" />
+      <Card title="100 Apex Coins" game="Apex Legends" src={img1} />
+      <Card title="2000 UC" game="PUBG Mobile" src={img2} />
+      <Card title="4000 Diamonds" game="Mobile Legends" src={img3} />
+      <Card title="1000 Diamonds" game="Play Together" src={img4} />
+      <Card title="230 Voucher" game="GTA San Andreas" src={img5} />
+      <Card title="100 Apex Coins" game="Garena FF" src={img6} />
+      <Card title="2000 UC" game="PUBG Mobile" src={img1} />
+      <Card title="4000 Diamonds" game="Mobile Legends" src={img2} />
+      <Card title="1000 Diamonds" game="Play Together" src={img3} />
+      <Card title="230 Voucher" game="Arena of Valor" src={img4} />
     </Carousel>
   );
 };
