@@ -74,9 +74,17 @@ const CardList = (props) => {
         price={200000}
       />
       <Card
-        title="230 Voucher"
-        game="GTA San Andreas"
+        title="140 Diamonds"
+        game="Garena Free Fire"
         src={img5}
+        stok={1000}
+        disc={50}
+        price={200000}
+      />
+      <Card
+        title="2000 UC"
+        game="PUBG Mobile"
+        src={img1}
         stok={1000}
         disc={50}
         price={200000}
@@ -87,14 +95,6 @@ const CardList = (props) => {
         src={img6}
         stok={1000}
         disc={10}
-        price={200000}
-      />
-      <Card
-        title="2000 UC"
-        game="PUBG Mobile"
-        src={img1}
-        stok={1000}
-        disc={50}
         price={200000}
       />
       <Card

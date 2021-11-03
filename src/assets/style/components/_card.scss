@@ -1,0 +1,73 @@
+.Sale-price {
+  padding-left: 8px;
+  text-decoration-line: line-through;
+  color: $grey-light;
+  font: $s-regular;
+}
+.Grey-text {
+  color: $grey-light;
+}
+
+.Card {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  flex-direction: column;
+  padding: 0px;
+  position: relative;
+  min-height: 238px;
+  min-width: 148px;
+  border-radius: $default;
+  background-color: $white;
+  box-shadow: $shadow-light;
+  > .Card-body {
+    font: $s-regular;
+    padding: 10px;
+    div {
+      margin: 10px 0;
+    }
+    p {
+      margin: 0;
+
+      &.Card-price {
+        color: $orange;
+        font: $xl-bold;
+        margin: 10px 0;
+      }
+    }
+  }
+  > .Card-footer {
+    padding: 0px $default $default $default;
+    p {
+      margin: 0;
+    }
+  }
+}
+.CardList {
+  display: flex;
+}
+.Img-mask {
+  /* Mask Group */
+  position: static;
+  min-width: $img-w;
+  height: $img-w/2;
+  left: 0px;
+  top: 0px;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
+  box-shadow: $shadow-light;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 84.03px;
+    left: 0px;
+    top: 0px;
+    border-radius: $default $default 0 0;
+  }
+}

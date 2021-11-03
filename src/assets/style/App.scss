@@ -1,0 +1,51 @@
+// variable
+@import "var/all";
+@import "var/colors";
+@import "var/fonts";
+@import "var/keyframes";
+// components
+@import "components/card";
+@import "components/indicator";
+@import "components/btn";
+// pages
+@import "pages/home";
+@import "pages/detail";
+
+html {
+  width: 100%;
+}
+body {
+  font: $s-regular;
+}
+.Body {
+  padding: 0 10px;
+}
+
+.Carousel {
+  margin: $default * 1.5 0;
+}
+
+svg.icon {
+  display: flex;
+}
+input,
+textarea,
+button,
+select,
+a,
+.Btn-text {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// desktop to mobile
+@media only screen and (min-width: 601px) and (orientation: landscape) {
+  #root {
+    display: flex;
+    justify-content: center;
+    background-color: $grey-light-3;
+  }
+  .App {
+    width: 600px;
+    background-color: $white;
+  }
+}

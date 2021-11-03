@@ -1,0 +1,26 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: $default;
+  > svg.Icon.Icon-heart {
+    animation: fill-in 0.5s ease-in forwards;
+    fill: $red;
+    fill-opacity: 0;
+    path {
+      stroke-dashoffset: 50;
+      stroke-dasharray: 50;
+      animation: outline-in 0.5s ease forwards;
+    }
+  }
+}
+.Btn {
+  background-color: $orange;
+  border: none;
+  border-radius: $default;
+  color: $white;
+  font: $l-bold;
+  height: 40px;
+  min-width: 300px;
+  width: 100%;
+}

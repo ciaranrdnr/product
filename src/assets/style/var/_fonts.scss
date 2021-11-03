@@ -1,0 +1,33 @@
+$xxl-bold: 700 21px/24px Roboto, sans-serif;
+
+$xl-bold: 700 16px/24px Roboto, sans-serif;
+$xl-medium: 500 16px/24px Roboto, sans-serif;
+$xl-regular: 400 16px/24px Roboto, sans-serif;
+
+$l-bold: 700 14px/22px Roboto, sans-serif;
+$l-medium: 500 14px/22px Roboto, sans-serif;
+$l-regular: 400 14px/22px Roboto, sans-serif;
+
+$m-bold: 700 12px/20px Roboto, sans-serif;
+$m-medium: 500 12px/20px Roboto, sans-serif;
+$m-regular: 400 12px/20px Roboto, sans-serif;
+
+$s-bold: 700 11px/19px Roboto, sans-serif;
+$s-medium: 500 11px/19px Roboto, sans-serif;
+$s-regular: 400 11px/19px Roboto, sans-serif;
+
+$xs-regular: 400 10px/18px Roboto, sans-serif;
+
+h1,
+h2 .Xl-bold {
+  font: $xl-bold;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: $black;
+}

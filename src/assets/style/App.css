@@ -1,22 +1,5 @@
-html {
-  width: 100%;
-}
-
-body {
-  font: 400 11px/19px Roboto, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.Body {
-  padding: 0 10px;
-}
-
 h1,
-.Xl-bold {
-  font: 700 16px/24px Roboto, sans-serif;
-}
-
-h2 {
+h2 .Xl-bold {
   font: 700 16px/24px Roboto, sans-serif;
 }
 
@@ -30,6 +13,64 @@ a:active {
   color: #000000;
 }
 
+@-webkit-keyframes maximize {
+  0% {
+    width: 100%;
+    height: auto;
+  }
+  20% {
+    width: 110%;
+    height: auto;
+  }
+  100% {
+    width: 100%;
+    height: auto;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes maximize {
+  0% {
+    width: 100%;
+    height: auto;
+  }
+  20% {
+    width: 110%;
+    height: auto;
+  }
+  100% {
+    width: 100%;
+    height: auto;
+    fill-opacity: 1;
+  }
+}
+
+@-webkit-keyframes fill-in {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fill-in {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@-webkit-keyframes outline-in {
+  to {
+    stroke-dashoffset: 0;
+    stroke: #f33030;
+  }
+}
+
+@keyframes outline-in {
+  to {
+    stroke-dashoffset: 0;
+    stroke: #f33030;
+  }
+}
+
 .Sale-price {
   padding-left: 8px;
   -webkit-text-decoration-line: line-through;
@@ -40,47 +81,6 @@ a:active {
 
 .Grey-text {
   color: #9b9b9b;
-}
-
-.Btn {
-  background-color: #ef6000;
-  border: none;
-  border-radius: 8px;
-  color: #ffffff;
-  font: 700 14px/22px Roboto, sans-serif;
-  height: 40px;
-  min-width: 300px;
-  width: 100%;
-}
-
-.Indicator {
-  font: 400 12px/20px Roboto, sans-serif;
-  height: 16px;
-  border-radius: 4px;
-  border: none;
-  padding: 0 4px;
-  text-align: center;
-  display: inline;
-}
-
-.Indicator.Outline-green {
-  border: 1px solid #208060;
-  color: #208060;
-}
-
-.Indicator.Outline-orange {
-  border: 1px solid #ef6000;
-  color: #ef6000;
-}
-
-.Indicator.Fill-green {
-  background-color: #d4edda;
-  color: #208060;
-}
-
-.Indicator.Fill-red {
-  background-color: #f33030;
-  color: #ffffff;
 }
 
 .Card {
@@ -167,6 +167,68 @@ a:active {
   left: 0px;
   top: 0px;
   border-radius: 8px 8px 0 0;
+}
+
+.Indicator {
+  font: 400 12px/20px Roboto, sans-serif;
+  height: 16px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 4px;
+  text-align: center;
+  display: inline;
+}
+
+.Indicator.Outline-green {
+  border: 1px solid #208060;
+  color: #208060;
+}
+
+.Indicator.Outline-orange {
+  border: 1px solid #ef6000;
+  color: #ef6000;
+}
+
+.Indicator.Fill-green {
+  background-color: #d4edda;
+  color: #208060;
+}
+
+.Indicator.Fill-red {
+  background-color: #f33030;
+  color: #ffffff;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button > svg.Icon.Icon-heart {
+  -webkit-animation: fill-in 0.5s ease-in forwards;
+          animation: fill-in 0.5s ease-in forwards;
+  fill: #f33030;
+  fill-opacity: 0;
+}
+
+button > svg.Icon.Icon-heart path {
+  stroke-dashoffset: 50;
+  stroke-dasharray: 50;
+  -webkit-animation: outline-in 0.5s ease forwards;
+          animation: outline-in 0.5s ease forwards;
+}
+
+.Btn {
+  background-color: #ef6000;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font: 700 14px/22px Roboto, sans-serif;
+  height: 40px;
+  min-width: 300px;
+  width: 100%;
 }
 
 .Header {
@@ -300,8 +362,23 @@ a:active {
           justify-content: space-between;
 }
 
-.Carousel {
-  margin: 12px 0;
+.Circle {
+  background: #f33030;
+  min-width: 12px;
+  height: 16px;
+  color: #ffffff;
+  border-radius: 8px;
+  font: 400 10px/18px Roboto, sans-serif;
+  position: absolute;
+  top: 4px;
+  padding: 0 2px;
+  right: 10px;
+}
+
+.Deskripsi {
+  font: 400 12px/20px Roboto, sans-serif;
+  text-align: justify;
+  padding-bottom: 80px;
 }
 
 .Nav {
@@ -358,71 +435,38 @@ a:active {
   margin-left: 12px;
 }
 
-svg.icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@-webkit-keyframes toFill {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 200%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes toFill {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 200%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-button .Icon .Icon-heart {
-  fill: #f33030;
-  width: 100px;
-  -webkit-animation: toFill 4s ease-in;
-          animation: toFill 4s ease-in;
-}
-
-.Circle {
-  background: #f33030;
-  min-width: 12px;
-  height: 16px;
-  color: #ffffff;
-  border-radius: 8px;
-  font: 400 10px/18px Roboto, sans-serif;
-  position: absolute;
-  top: 4px;
-  padding: 0 2px;
-  right: 10px;
-}
-
 [data-rsbs-has-footer="false"] [data-rsbs-content] {
   padding: 0 16px 10px 16px;
 }
 
-p.Deskripsi {
-  font: 400 12px/20px Roboto, sans-serif;
-  text-align: justify;
-  padding-bottom: 80px;
+.Bs-close {
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  background: rgba(52, 52, 52, 0.5);
+  color: #ffffff;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  font: 400 11px/19px Roboto, sans-serif;
+}
+
+.Body {
+  padding: 0 10px;
+}
+
+.Carousel {
+  margin: 12px 0;
+}
+
+svg.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 input,

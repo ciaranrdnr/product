@@ -1,0 +1,15 @@
+.Header {
+  border-bottom: solid 1px $grey-light-2;
+  padding: 10px;
+  img {
+    max-width: 123px;
+    height: auto;
+  }
+}
+.Footer {
+  border-top: solid 1px $grey-light-2;
+  text-align: center;
+  margin-top: 50px;
+  padding: $default * 1.25;
+  background: $white;
+}

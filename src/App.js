@@ -1,5 +1,5 @@
-import "./assets/App.css";
-// import IconLike from "../../assets/icon/heart.js";
+import "./assets/style/App.css";
+// import IconLike from "./assets/icon/heart.js";
 
 import Routes from "./navigations/Routes";
 

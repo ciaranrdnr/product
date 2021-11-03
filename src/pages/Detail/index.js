@@ -49,6 +49,9 @@ const Detail = () => {
             maxHeight / 0.6,
           ]}
         >
+          <button className="Bs-close" onClick={dismissImg}>
+            X
+          </button>
           <img className="View-img" src={imgGame} alt="game" />
         </BottomSheet>
         <div className="Top">
