@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import Indicator from "../../components/Indicator";
 import IconLike from "../../assets/icon/heart.js";
-import imgGame from "../../assets/game-1.png";
+import imgGame from "../../assets/img/game-1.webp";
 
 const DetailHead = () => {
   const [fill, setFill] = useState(false);
