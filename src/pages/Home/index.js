@@ -1,8 +1,8 @@
-import Header from "../../components/Layout/header";
-import Footer from "../../components/Layout/footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import CardList from "../../components/CardList";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <Header />

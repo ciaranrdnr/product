@@ -1,4 +1,4 @@
-import Indicator from "./indicator";
+import Indicator from "../Indicator";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
@@ -25,26 +25,36 @@ const Card = (props) => {
               fill=""
             />
           </div>
-          <div>
+          {props.disc > 0 ? (
+            <>
+              <div>
+                <Indicator
+                  titleFront=""
+                  num={`${props.disc}%`}
+                  titleBack=""
+                  outline=""
+                  fill="Fill-red"
+                />
+                <span className="Sale-price">Rp{money(props.price)}</span>
+              </div>
+              <p className="Card-price">
+                Rp{money(props.price * (props.disc / 100))}
+              </p>
+            </>
+          ) : (
+            <p className="Card-price">Rp{money(props.price)}</p>
+          )}
+          {props.badge ? (
             <Indicator
               titleFront=""
-              num={`${props.disc}%`}
-              titleBack=""
+              num="10"
+              titleBack="Menit Kirim"
               outline=""
-              fill="Fill-red"
+              fill="Fill-green"
             />
-            <span className="Sale-price">Rp{money(props.price)}</span>
-          </div>
-          <p className="Card-price">
-            Rp{money(props.price * (props.disc / 100))}
-          </p>
-          <Indicator
-            titleFront=""
-            num="10"
-            titleBack="Menit Kirim"
-            outline=""
-            fill="Fill-green"
-          />
+          ) : (
+            <></>
+          )}
         </div>
         <div className="Card-footer">
           <p className="Grey-text">1000 produk terjual</p>

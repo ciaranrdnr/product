@@ -6,8 +6,8 @@ import img3 from "../../assets/game-4.webp";
 import img5 from "../../assets/game-5.webp";
 import img6 from "../../assets/game-6.webp";
 import "react-multi-carousel/lib/styles.css";
-import Card from "../card";
-const CardList = (props) => {
+import Card from "../Card";
+const CardList = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -34,7 +34,7 @@ const CardList = (props) => {
       draggable={true}
       showDots={false}
       responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
+      ssr={true}
       infinite={true}
       autoPlay={false}
       autoPlaySpeed={2000}
@@ -45,33 +45,37 @@ const CardList = (props) => {
         title="100 Apex Coins"
         game="Apex Legends"
         src={img1}
-        stok={12}
+        stok={1000}
         disc={50}
         price={200000}
+        badge={true}
       />
       <Card
         title="2000 UC"
         game="PUBG Mobile"
         src={img2}
-        stok={1000}
-        disc={50}
-        price={200000}
+        stok={500}
+        disc={17}
+        price={550000}
+        badge={false}
       />
       <Card
         title="4000 Diamonds"
         game="Mobile Legends"
         src={img3}
-        stok={1000}
-        disc={20}
+        stok={465}
+        disc={0}
         price={200000}
+        badge={true}
       />
       <Card
         title="1000 Diamonds"
         game="Play Together"
         src={img4}
-        stok={2}
+        stok={2344}
         disc={50}
         price={200000}
+        badge={true}
       />
       <Card
         title="140 Diamonds"
@@ -80,6 +84,7 @@ const CardList = (props) => {
         stok={1000}
         disc={50}
         price={200000}
+        badge={false}
       />
       <Card
         title="2000 UC"
@@ -88,6 +93,7 @@ const CardList = (props) => {
         stok={1000}
         disc={50}
         price={200000}
+        badge={false}
       />
       <Card
         title="100 Apex Coins"
@@ -96,6 +102,7 @@ const CardList = (props) => {
         stok={1000}
         disc={10}
         price={200000}
+        badge={true}
       />
       <Card
         title="4000 Diamonds"
@@ -104,6 +111,7 @@ const CardList = (props) => {
         stok={1000}
         disc={50}
         price={200000}
+        badge={true}
       />
       <Card
         title="1000 Diamonds"
@@ -112,6 +120,7 @@ const CardList = (props) => {
         stok={100}
         disc={50}
         price={200000}
+        badge={false}
       />
       <Card
         title="230 Voucher"
@@ -120,6 +129,7 @@ const CardList = (props) => {
         stok={100}
         disc={50}
         price={200000}
+        badge={true}
       />
     </Carousel>
   );

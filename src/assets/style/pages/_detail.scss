@@ -97,6 +97,7 @@
   font: $m-regular;
   text-align: justify;
   padding-bottom: $default * 10;
+  white-space: pre-line;
 }
 .Nav {
   justify-content: space-between;
