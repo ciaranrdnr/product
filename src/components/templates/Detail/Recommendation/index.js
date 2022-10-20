@@ -1,4 +1,4 @@
-import CardList from "../../components/CardList";
+import CardList from "../../../organism/CardList";
 const DetailOthers = () => {
   return (
     <div className="DetailOthers">

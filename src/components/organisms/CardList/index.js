@@ -1,12 +1,12 @@
 import Carousel from "react-multi-carousel";
-import img1 from "../../assets/img/game-1.webp";
-import img4 from "../../assets/img/game-2.webp";
-import img2 from "../../assets/img/game-3.webp";
-import img3 from "../../assets/img/game-4.webp";
-import img5 from "../../assets/img/game-5.webp";
-import img6 from "../../assets/img/game-6.webp";
+import img1 from "../../../assets/img/game-1.webp";
+import img4 from "../../../assets/img/game-2.webp";
+import img2 from "../../../assets/img/game-3.webp";
+import img3 from "../../../assets/img/game-4.webp";
+import img5 from "../../../assets/img/game-5.webp";
+import img6 from "../../../assets/img/game-6.webp";
 import "react-multi-carousel/lib/styles.css";
-import Card from "../Card";
+import Card from "../../molecule/CardProduct";
 const CardList = () => {
   const responsive = {
     superLargeDesktop: {

@@ -1,6 +1,6 @@
-import IconCart from "../../assets/icon/cart.js";
-import IconShare from "../../assets/icon/share.js";
-import IconBack from "../../assets/icon/back.js";
+import IconCart from "../../../../assets/icon/cart.js";
+import IconShare from "../../../../assets/icon/share.js";
+import IconBack from "../../../../assets/icon/back.js";
 import { Link } from "react-router-dom";
 const Nav = (props) => {
   return (

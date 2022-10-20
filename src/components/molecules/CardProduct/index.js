@@ -1,16 +1,15 @@
 import Indicator from "../Indicator";
-import { Link } from "react-router-dom";
+import Card from "../../atom/Card";
 
-const Card = (props) => {
+const CardProduct = (props) => {
   const money = (number) => {
     return new Intl.NumberFormat("id-IN", {
       maximumSignificantDigits: 3,
     }).format(number);
   };
   return (
-    <Link to="/detail">
-      <div className="Card">
-        <div className="Card-header Img-mask">
+    <Card link={'/detail'} children={<>
+    <div className="Card-header Img-mask">
           <img src={props.src} alt="product" />
         </div>
         <div className="Card-body">
@@ -58,9 +57,7 @@ const Card = (props) => {
         </div>
         <div className="Card-footer">
           <p className="Grey-text">1000 produk terjual</p>
-        </div>
-      </div>
-    </Link>
+        </div></>}/>
   );
 };
-export default Card;
+export default CardProduct;

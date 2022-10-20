@@ -1,4 +1,4 @@
-import Btn from "../../components/Btn";
+import Btn from "../../../atom/Btn";
 const Footer = ({ setNumCart, numCart }) => {
   return (
     <div className="Footer">

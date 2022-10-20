@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
 import { BottomSheet } from "react-spring-bottom-sheet";
-import Indicator from "../../components/Indicator";
-import IconLike from "../../assets/icon/heart.js";
-import imgGame from "../../assets/img/game-1.webp";
+import Indicator from "../../../Indicator";
+import IconLike from "../../../../assets/icon/heart.js";
+import imgGame from "../../../../assets/img/game-1.webp";
+import Image from "../../../atom/Image";
 
 const DetailHead = () => {
   const [fill, setFill] = useState(false);
@@ -13,7 +14,7 @@ const DetailHead = () => {
   }
   return (
     <div className="DetailHead">
-      <img
+      <Image
         className="Img-detail"
         src={imgGame}
         alt="game"
